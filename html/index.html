@@ -11,16 +11,16 @@
 <body>
 
     <header>
-        <a href="#" class="logo">
+        <a href="#hero" class="logo">
             <img src="../assetes/logo.png" alt="DMU Logo" style="height: 40px;">
         </a>
         <nav>
             <ul>
-                <li><a href="#">대학소개</a></li>
-                <li><a href="#">학부·학과</a></li>
-                <li><a href="#">입학안내</a></li>
-                <li><a href="#">학사공지</a></li>
-                <li><a href="#">대학뉴스</a></li>
+                <li><a href="#hero" data-target="hero">대학소개</a></li>
+                <li><a href="#departments" data-target="departments">학부·학과</a></li>
+                <li><a href="#services" data-target="services">입학안내</a></li>
+                <li><a href="#notices" data-target="notices">학사공지</a></li>
+                <li><a href="#news" data-target="news">대학뉴스</a></li>
             </ul>
         </nav>
         <div class="header-right">
@@ -30,7 +30,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="hero">
             <h1>동양미래대학교</h1>
             <p>창의적이고 전문적인 인재를 양성하는 글로벌 직업교육 선도대학. <br>최첨단 기술과 학문의 융합을 통해 당신의 미래를 설계하세요.</p>
             <div class="hero-btns">
@@ -39,7 +39,7 @@
         </section>
 
         <!-- Stats Section (Like Electron's features) -->
-        <section class="dept-grid">
+        <section class="dept-grid" id="departments">
             <h2 class="section-title">주요 학부 및 학과</h2>
             <div class="grid">
                 <div class="card">
@@ -103,10 +103,10 @@
         </section>
 
         <!-- News / Notices Section -->
-        <section style="background-color: rgba(255,255,255,0.02);">
+        <section style="background-color: rgba(255,255,255,0.02);" id="updates">
             <h2 class="section-title">DMU 업데이트</h2>
             <div class="grid">
-                <div class="card">
+                <div class="card" id="notices">
                     <div style="color: var(--accent-color); margin-bottom: 10px; font-weight: 600; display: flex; justify-content: space-between;">
                         <span>공지사항</span>
                         <i class="fa-solid fa-plus" style="cursor: pointer;"></i>
@@ -124,7 +124,7 @@
                     <p>2월 24일 체육관에서 진행될 예정입니다. 학생들의 건승을 빕니다.</p>
                     <div style="margin-top: 15px; font-size: 0.8rem; color: #555;">2026.05.12</div>
                 </div>
-                <div class="card">
+                <div class="card" id="news">
                     <div style="color: var(--accent-color); margin-bottom: 10px; font-weight: 600; display: flex; justify-content: space-between;">
                         <span>대학뉴스</span>
                         <i class="fa-solid fa-plus" style="cursor: pointer;"></i>
@@ -142,9 +142,21 @@
         <div style="margin-top: 20px;">
             <a href="#" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">개인정보처리방침</a>
             <a href="#" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">이용약관</a>
-            <a href="#" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">오시는 길</a>
+            <a href="#" id="open-map" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">오시는 길</a>
         </div>
     </footer>
+
+    <div class="modal-overlay" id="mapModal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="mapModalTitle">
+            <button class="modal-close" id="closeMap" aria-label="닫기">×</button>
+            <h3 id="mapModalTitle">동양미래대학교 오시는 길</h3>
+            <p>서울시 구로구 경인로 445<p>
+            <p>동양미래대학교 캠퍼스로 오시는 길을 안내합니다.</p>
+            <div class="map-placeholder">
+                지도 화면 또는 위치 설명을 여기에 표시하세요.
+            </div>
+        </div>
+    </div>
 
     <script src="../assetes/main.js"></script>
 </body>
