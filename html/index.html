@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동양미래대학교 | Redesigned with Electron Aesthetic</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#hero" class="logo">
+            <img src="../assetes/logo.png" alt="DMU Logo" style="height: 40px;">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#hero" data-target="hero">대학소개</a></li>
+                <li><a href="#departments" data-target="departments">학부·학과</a></li>
+                <li><a href="#services" data-target="services">입학안내</a></li>
+                <li><a href="#notices" data-target="notices">학사공지</a></li>
+                <li><a href="#news" data-target="news">대학뉴스</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="#" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Portal Login</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <h1>동양미래대학교</h1>
+            <p>창의적이고 전문적인 인재를 양성하는 글로벌 직업교육 선도대학. <br>최첨단 기술과 학문의 융합을 통해 당신의 미래를 설계하세요.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn-primary">2026학년도 신입생 모집</a>
+            </div>
+        </section>
+
+        <!-- Stats Section (Like Electron's features) -->
+        <section class="dept-grid" id="departments">
+            <h2 class="section-title">주요 학부 및 학과</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-gear"></i></div>
+                    <h3>기계공학부</h3>
+                    <p>기계설계, 미래자동차 등 첨단 제조 산업의 핵심 기술을 교육합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
+                    <h3>로봇자동화공학부</h3>
+                    <p>스마트 팩토리와 로봇 제어 시스템을 다루는 전문가를 육성합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+                    <h3>컴퓨터공학부</h3>
+                    <p>소프트웨어 개발, AI, 정보보안 등 미래 IT 산업을 주도합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>전기전자통신공학부</h3>
+                    <p>반도체, 통신, 에너지 시스템의 기초부터 실무까지 마스터합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>경영학부</h3>
+                    <p>글로벌 비즈니스 매너와 데이터 분석 능력을 갖춘 창의적 리더 양성.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>생활환경공학부</h3>
+                    <p>건축설계, 실내디자인 등 인간 중심의 환경을 창조하는 기술.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links / Services -->
+        <section id="services">
+            <div class="grid">
+                <div class="card" style="display: flex; align-items: center; gap: 20px;">
+                    <i class="fa-solid fa-graduation-cap" style="font-size: 2rem; color: var(--accent-color);"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">학생/교직원</h4>
+                        <p style="font-size: 0.9rem;">학사시스템, 메일, 포털 서비스</p>
+                    </div>
+                </div>
+                <div class="card" style="display: flex; align-items: center; gap: 20px;">
+                    <i class="fa-solid fa-user-plus" style="font-size: 2rem; color: var(--accent-color);"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">예비대학생</h4>
+                        <p style="font-size: 0.9rem;">입학안내, 입시상담, 모집요강</p>
+                    </div>
+                </div>
+                <div class="card" style="display: flex; align-items: center; gap: 20px;">
+                    <i class="fa-solid fa-briefcase" style="font-size: 2rem; color: var(--accent-color);"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">취업/창업</h4>
+                        <p style="font-size: 0.9rem;">취업지원, 창업교육센터</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News / Notices Section -->
+        <section style="background-color: rgba(255,255,255,0.02);" id="updates">
+            <h2 class="section-title">DMU 업데이트</h2>
+            <div class="grid">
+                <div class="card" id="notices">
+                    <div style="color: var(--accent-color); margin-bottom: 10px; font-weight: 600; display: flex; justify-content: space-between;">
+                        <span>공지사항</span>
+                        <i class="fa-solid fa-plus" style="cursor: pointer;"></i>
+                    </div>
+                    <h3>[공고] 2026학년도 1학기 국가장학금 신청 안내</h3>
+                    <p>신청 기간 내에 반드시 학생지원팀을 통해 접수하시기 바랍니다. 관련 서류 확인 필수.</p>
+                    <div style="margin-top: 15px; font-size: 0.8rem; color: #555;">2026.05.14</div>
+                </div>
+                <div class="card">
+                    <div style="color: var(--accent-color); margin-bottom: 10px; font-weight: 600; display: flex; justify-content: space-between;">
+                        <span>학사일정</span>
+                        <i class="fa-solid fa-plus" style="cursor: pointer;"></i>
+                    </div>
+                    <h3>추기 졸업식 및 학위수여식 일정 안내</h3>
+                    <p>2월 24일 체육관에서 진행될 예정입니다. 학생들의 건승을 빕니다.</p>
+                    <div style="margin-top: 15px; font-size: 0.8rem; color: #555;">2026.05.12</div>
+                </div>
+                <div class="card" id="news">
+                    <div style="color: var(--accent-color); margin-bottom: 10px; font-weight: 600; display: flex; justify-content: space-between;">
+                        <span>대학뉴스</span>
+                        <i class="fa-solid fa-plus" style="cursor: pointer;"></i>
+                    </div>
+                    <h3>DMU 융합 캡스톤 디자인 경진대회 성료</h3>
+                    <p>학생들의 창의적인 아이디어가 돋보인 이번 대회의 우수한 수상작들을 지금 확인하세요.</p>
+                    <div style="margin-top: 15px; font-size: 0.8rem; color: #555;">2026.05.10</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dongyang Mirae University. All rights reserved.</p>
+        <div style="margin-top: 20px;">
+            <a href="#" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">개인정보처리방침</a>
+            <a href="#" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">이용약관</a>
+            <a href="#" id="open-map" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">오시는 길</a>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="mapModal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="mapModalTitle">
+            <button class="modal-close" id="closeMap" aria-label="닫기">×</button>
+            <h3 id="mapModalTitle">동양미래대학교 오시는 길</h3>
+            <p>서울시 구로구 경인로 445<p>
+            <p>동양미래대학교 캠퍼스로 오시는 길을 안내합니다.</p>
+            <div class="map-placeholder">
+                지도 화면 또는 위치 설명을 여기에 표시하세요.
+            </div>
+        </div>
+    </div>
+
+    <script src="../assetes/main.js"></script>
+</body>
+</html>
